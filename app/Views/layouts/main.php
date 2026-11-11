@@ -20,7 +20,7 @@
 
         <nav>
             <a href="<?= url('user/index') ?>">Usuários</a>
-            <a href="<?= url('user/create') ?>">Novo usuário</a>
+            <a href="<?= url('user/create') ?>">Cadastrar usuário</a>
         </nav>
     </header>
 
