@@ -11,11 +11,7 @@ class UserController
     {
         $this->render('users/index', [
             'title' => 'Usuários',
-<<<<<<< HEAD
-            // 'users' => User::all(),
-=======
             'users' => User::all(),
->>>>>>> fca81a8f451c9e731e920b6dd60a59fd81cbf282
         ]);
     }
 
@@ -95,7 +91,10 @@ class UserController
     {
         session_status() === PHP_SESSION_NONE && session_start();
 
-        if (!hash_equals($_SESSION['csrf'] ?? '', $_POST['csrf'] ?? '')) {
+        if (!hash_equals(
+            $_SESSION['csrf'] ?? '',
+            $_POST['csrf'] ?? ''
+        )) {
             http_response_code(403);
             exit('Token inválido');
         }
@@ -118,10 +117,16 @@ class UserController
             return ob_get_clean();
         };
 
-        $content = $renderFile($base . $view . '.php', $data);
+        $content = $renderFile(
+            $base . $view . '.php',
+            $data
+        );
 
         $vars = $data + ['content' => $content];
 
-        echo $renderFile($base . 'layouts/main.php', $vars);
+        echo $renderFile(
+            $base . 'layouts/main.php',
+            $vars
+        );
     }
 }
