@@ -11,7 +11,11 @@ class UserController
     {
         $this->render('users/index', [
             'title' => 'Usuários',
+<<<<<<< HEAD
             // 'users' => User::all(),
+=======
+            'users' => User::all(),
+>>>>>>> fca81a8f451c9e731e920b6dd60a59fd81cbf282
         ]);
     }
 

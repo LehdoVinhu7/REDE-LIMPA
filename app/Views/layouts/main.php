@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="en">
     <head>
         <meta charset="utf-8" />
@@ -39,11 +40,38 @@
         </header>
         <!-- Page content-->
 
+=======
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title><?= e($title ?? 'Projeto MVC') ?></title>
+
+    <link rel="icon" href="<?= asset('img/logo.png') ?>">
+    <link rel="stylesheet" href="<?= asset('css/estilo.css') ?>">
+</head>
+
+<body>
+
+    <header class="topo">
+        <img src="<?= asset('img/logo.png') ?>"
+             alt="Logo do projeto"
+             width="40" height="40">
+
+        <nav>
+            <a href="<?= url('user/index') ?>">Usuários</a>
+            <a href="<?= url('user/create') ?>">Cadastrar usuário</a>
+        </nav>
+    </header>
+>>>>>>> fca81a8f451c9e731e920b6dd60a59fd81cbf282
 
     <main>
         <?= $content ?>
     </main>
 
+<<<<<<< HEAD
 <footer class="py-5 bg-dark">
             <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Rede Limpa 2026</p></div>
         </footer>
@@ -53,4 +81,9 @@
         <script src="js/scripts.js"></script>
             <script src="<?= asset('js/scripts.js') ?>" defer></script>
     </body>
+=======
+    <script src="<?= asset('js/app.js') ?>" defer></script>
+
+</body>
+>>>>>>> fca81a8f451c9e731e920b6dd60a59fd81cbf282
 </html>
